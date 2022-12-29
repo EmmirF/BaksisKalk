@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0A8AF9"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvRacun"
+        android:textColor="#02F2E2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="48dp"
+        android:fontFamily="casual"
+        android:text="Račun"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:textColor="#02F2E2"
+        android:id="@+id/tvProcenat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="casual"
+        android:text="Procenat"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tvRacun"
+        app:layout_constraintTop_toBottomOf="@+id/tvRacun" />
+
+    <TextView
+        android:id="@+id/tvBaksis"
+        android:textColor="#02F2E2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="casual"
+        android:text="Bakšiš"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tvRacun"
+        app:layout_constraintTop_toBottomOf="@+id/tvProcenat" />
+
+    <TextView
+        android:id="@+id/tvUkupno"
+        android:textColor="#02F2E2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="casual"
+        android:text="Ukupno"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tvRacun"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvBaksis" />
+
+    <EditText
+        android:id="@+id/etIznosRacuna"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="42dp"
+        android:ems="8"
+        android:hint="Iznos Računa"
+        android:inputType="numberDecimal"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvRacun"
+        app:layout_constraintStart_toEndOf="@+id/tvRacun"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <SeekBar
+        android:id="@+id/seekBarBaksis"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:max="40"
+        app:layout_constraintBottom_toBottomOf="@+id/tvProcenat"
+        app:layout_constraintStart_toStartOf="@+id/etIznosRacuna"
+        app:layout_constraintTop_toTopOf="@+id/tvProcenat" />
+
+    <TextView
+        android:id="@+id/tvIznosBaksisa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="@+id/tvBaksis"
+        app:layout_constraintStart_toStartOf="@+id/seekBarBaksis"
+        app:layout_constraintTop_toTopOf="@+id/tvBaksis" />
+
+    <TextView
+        android:id="@+id/tvUkupanIznos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="@+id/tvUkupno"
+        app:layout_constraintStart_toStartOf="@+id/tvIznosBaksisa"
+        app:layout_constraintTop_toTopOf="@+id/tvUkupno" />
+
+    <TextView
+        android:id="@+id/tvBrojOsoba"
+        android:textColor="#02F2E2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="casual"
+        android:text="Broj Osoba"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tvRacun"
+        app:layout_constraintTop_toBottomOf="@+id/tvUkupno"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/etBrojOsoba"
+        android:layout_width="181dp"
+        android:layout_height="55dp"
+        android:ems="8"
+        android:hint="Broj Osoba"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="@+id/tvBrojOsoba"
+        app:layout_constraintStart_toStartOf="@+id/tvUkupanIznos"
+        app:layout_constraintTop_toTopOf="@+id/tvBrojOsoba"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="127dp" />
+
+    <TextView
+        android:id="@+id/tvFooter"
+        android:textColor="#00610A"
+        android:layout_width="323dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="230dp"
+        android:layout_marginEnd="44dp"
+        android:fontFamily="casual"
+        android:text="Najjači kalkulator bakšiša"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etBrojOsoba" />
+</androidx.constraintlayout.widget.ConstraintLayout>
